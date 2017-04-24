@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Student</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+           <!-- <a href="#{request.contextPath}/admin/dashboard.xhtml">Dashboard</a>
+            <a href="#{request.contextPath}/admin/student/create.xhtml">Student</a>
+            <a href="#{request.contextPath}/public/login.xhtml">Logout</a> -->
+            
+            <p:panel id="panel" header="NEW STUDENT">
+                <p:messages id="msgs" />
+
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="firstName" value="FirstName"/>
+                    <p:inputText id="firstName" value="#{student.firstName}" required="true"
+                                 requiredMessage="First Name is required"/>
+                    <p:message for="firstName" display="icon"/>
+                </h:panelGrid>
+
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="lastName" value="LastName"/>
+                    <p:inputText id="lastName" value="#{student.lastName}" required="true"
+                                 requiredMessage="Last Name is required"/>
+                    <p:message for="lastName" display="icon"/> <!--data ekak dammenathnam userta erro message ekak pennanne me code eken -->
+
+                    <p:commandButton value="save" action="#{studentAddBacking.createStudent()}" update="panel"/>
+                </h:panelGrid>
+
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

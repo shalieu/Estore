@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Publisher</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <h:form>
+            <p:panel id="panel" header="NEW PUBLISHER">
+                <p:messages id="msgs" />
+                
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="pubName" value="publisher Name"/>
+                    <p:inputText id="pubName" value="#{publisher.pubName}" required="true" 
+                                 requiredMessage="Publisher name required" />
+                    <p:message for="pubName" display="icon"/>
+                </h:panelGrid>
+                
+                 <h:panelGrid columns="2">
+                    <p:outputLabel for="emailAdd" value="email Address"/>
+                    <p:inputText id="emailAdd" value="#{publisher.emailAdd}" required="true" 
+                                 requiredMessage="Publisher email required" />
+                    <p:message for="emailAdd" display="icon"/>
+                </h:panelGrid>
+                
+                 <h:panelGrid columns="2">
+                    <p:outputLabel for="contactNo" value="contact Number"/>
+                    <p:inputText id="contactNo" value="#{publisher.contactNo}" required="true" 
+                                 requiredMessage="Publisher contact number required" />
+                    <p:message for="contactNo" display="icon"/>
+                    
+                    <p:commandButton value="save" action="#{publisherAddBacking.createPublisher()}" update="panel"/>
+               
+                </h:panelGrid>
+                
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+     <ui:composition>
+
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="#{request.contextPath}/admin/dashBoard.xhtml"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a></li>
+            <li><a href="#{request.contextPath}/protected/admin/course/list.xhtml">Manage Course</a></li>
+            <li><a href="#{request.contextPath}/protected/admin/license_class/list.xhtml">Manage License</a></li>
+            <li><a href="#{request.contextPath}/protected/admin/trainee/list.xhtml">Manage Trainee</a></li>
+             <li><a href="#{request.contextPath}/test/test.xhtml">Test</a></li>
+             <li><a href="#{request.contextPath}/admin/task/task.xhtml">Task</a></li>
+             <li><a href="#{request.contextPath}/admin/publisher/list.xhtml">Publisher</a></li>
+             <li><a href="#{request.contextPath}/admin/movie/create.xhtml">Movie</a></li>
+        
+        </ul>
+         
+        
+        <ul class="nav nav-sidebar">
+            
+     
+            
+
+
+        </ul>
+        <ul class="nav nav-sidebar">
+            <li><a href="#{request.contextPath}/admin/member/list.xhtml"><i class="fa fa-users"></i>Members</a></li>
+
+            <h:form>
+                <li><h:commandLink action="#{logOutBacking.logout}">Logout</h:commandLink></li></h:form>
+        </ul>        
+    </ui:composition>
+
+</html>
+
